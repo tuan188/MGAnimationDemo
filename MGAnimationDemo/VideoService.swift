@@ -63,9 +63,9 @@ class VideoService: NSObject {
                     print("adapter not ready")
                     NSThread.sleepForTimeInterval(0.1)
                 }
-                i++
+                i += duration/2
             }
-            
+            videoWriterInput.markAsFinished()
             videoWriter.finishWritingWithCompletionHandler({ () -> Void in
                 complete()
             })
