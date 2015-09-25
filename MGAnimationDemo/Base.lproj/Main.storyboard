@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qRL-fj-ADC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MGAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVa-uP-c4U">
+                                <rect key="frame" x="150" y="200" width="300" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IvY-cK-ZpN"/>
+                                    <constraint firstAttribute="width" constant="300" id="Tkb-FP-eSu"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-Uc-CXG">
+                                <rect key="frame" x="150" y="408" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onStartButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pF0-cQ-ZE5"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-9v-02P">
+                                <rect key="frame" x="150" y="460" width="300" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GXP-eK-bhJ"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV2-Iy-Clj">
+                                <rect key="frame" x="420" y="408" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="onPlayButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIV-DY-rN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uen-R8-cHz">
+                                <rect key="frame" x="277" y="408" width="46" height="30"/>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="onExportButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kOI-JF-KJ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GSM-9v-02P" firstAttribute="top" secondItem="uen-R8-cHz" secondAttribute="bottom" constant="22" id="94A-71-JHq"/>
+                            <constraint firstItem="uen-R8-cHz" firstAttribute="centerX" secondItem="bVa-uP-c4U" secondAttribute="centerX" id="CUs-Wf-Rhm"/>
+                            <constraint firstItem="CV2-Iy-Clj" firstAttribute="trailing" secondItem="bVa-uP-c4U" secondAttribute="trailing" id="Der-xq-MVD"/>
+                            <constraint firstItem="uen-R8-cHz" firstAttribute="top" secondItem="bVa-uP-c4U" secondAttribute="bottom" constant="8" id="Kkn-N4-C8l"/>
+                            <constraint firstItem="GSM-9v-02P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NHm-AH-NIh"/>
+                            <constraint firstItem="jHq-Uc-CXG" firstAttribute="top" secondItem="bVa-uP-c4U" secondAttribute="bottom" constant="8" id="UHa-xS-qCT"/>
+                            <constraint firstItem="CV2-Iy-Clj" firstAttribute="top" secondItem="bVa-uP-c4U" secondAttribute="bottom" constant="8" id="c6Y-op-x5Q"/>
+                            <constraint firstItem="bVa-uP-c4U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cQ0-5N-vJ6"/>
+                            <constraint firstItem="jHq-Uc-CXG" firstAttribute="leading" secondItem="bVa-uP-c4U" secondAttribute="leading" id="pJP-Rt-SSp"/>
+                            <constraint firstItem="bVa-uP-c4U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wow-0Z-2SU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="irT-sa-syb"/>
+                    <connections>
+                        <outlet property="animationView" destination="bVa-uP-c4U" id="q6q-jH-aMh"/>
+                        <outlet property="progressView" destination="GSM-9v-02P" id="wu3-Hs-3nd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="353"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0dG-I4-Gls">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qRL-fj-ADC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QHF-a3-Yky">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vVB-7W-FP2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYd-nr-VcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="353"/>
+        </scene>
+    </scenes>
+</document>
