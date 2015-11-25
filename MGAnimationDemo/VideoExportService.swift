@@ -116,7 +116,7 @@ class VideoExportService: NSObject {
     
     func timerTick() {
         dispatch_async(dispatch_get_main_queue()) {
-            self.delegate?.videoExportServiceExportProgress(exporter.progress)
+            self.delegate?.videoExportServiceExportProgress(self.exporter.progress)
         }
         
     }
